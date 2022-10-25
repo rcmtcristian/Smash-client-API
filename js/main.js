@@ -31,6 +31,9 @@ async function apiRequest() {
     document.getElementById("characterVoice").textContent = data.voice;
     document.getElementById("moves").textContent = specificMoves();
     document.getElementById("image").src = `/images/${data.ide}.webp`;
+    document.getElementById(
+      "characterVoiceImage"
+    ).src = `/images/${data.voiceId}.webp`;
     document.querySelector("body").style.backgroundColor = `#${data.color}`;
     document.querySelector(
       ".back"
