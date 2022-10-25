@@ -6,6 +6,7 @@ input.addEventListener("keypress", (e) => {
   if (e.key == "Enter") {
     e.preventDefault();
     document.getElementById("button").click();
+    input.value = "";
   }
 });
 
@@ -31,6 +32,7 @@ async function apiRequest() {
     document.getElementById("characterVoice").textContent = data.voice;
     document.getElementById("moves").textContent = specificMoves();
     document.getElementById("image").src = `/images/${data.ide}.webp`;
+    document.querySelector(".secondImage").src = `/images/${data.ide}.webp`;
     document.getElementById(
       "characterVoiceImage"
     ).src = `/images/${data.voiceId}.webp`;
@@ -46,49 +48,67 @@ async function apiRequest() {
 
 // search bar
 
-// let SocialLists = [
-//   { name: "Twitter", value: "@faridvatani" },
-//   { name: "Facebook", value: "@faridvatani" },
-//   { name: "Youtube", value: "@faridvatani" },
-//   { name: "Telegram", value: "@faridvatani" },
-//   { name: "Clubhouse", value: "@faridvatani" },
-//   { name: "whatsapp", value: "@faridvatani" },
-//   { name: "Skype", value: "@faridvatani" },
-//   { name: "Slack", value: "@faridvatani" },
-//   { name: "Discord", value: "@faridvatani" },
-// ];
+let characterList = [
+  { name: "Ganondorf", value: "Ganondorf" },
+  { name: "mr game & watch", value: "mr game & watch" },
+  { name: "jigglypuff", value: "jigglypuff" },
+  { name: "bowser", value: "bowser" },
+  { name: "captain falcon", value: "captain falcon" },
+  { name: "donkey kong", value: "donkey kong" },
+  { name: "dr mario", value: "dr mario" },
+  { name: "falco", value: "falco" },
+  { name: "fox", value: "fox" },
+  { name: "ganondorf", value: "ganondorf" },
+  { name: "ice climbers", value: "ice climbers" },
+  { name: "jigglypuff", value: "jigglypuff" },
+  { name: "kirby", value: "kirby" },
+  { name: "link", value: "link" },
+  { name: "luigi", value: "luigi" },
+  { name: "mario", value: "mario" },
+  { name: "Discord", value: "faridvatani" },
+  { name: "marth", value: "marth" },
+  { name: "ness", value: "ness" },
+  { name: "peach", value: "peach" },
+  { name: "pichu", value: " pichu" },
+  { name: "pikachu", value: "pikachu" },
+  { name: "roy", value: "roy" },
+  { name: "samus", value: " samus" },
+  { name: "young link", value: "young link" },
+  { name: "yoshi", value: "yoshi" },
+  { name: "zelda", value: "zelda" },
+];
 
-// const searchWrapper = document.querySelector(".search");
-// const inputBox = searchWrapper.querySelector("input");
-// const suggBox = searchWrapper.querySelector(".autocomp-box");
+const searchWrapper = document.querySelector(".search");
+const inputBox = searchWrapper.querySelector("input");
+const suggBox = searchWrapper.querySelector(".autocomp-box");
 
-// inputBox.onkeyup = (event) => {
-//   let userData = event.target.value;
-//   let emptyArray = [];
-//   if (userData) {
-//     emptyArray = SocialLists.filter((data, { name, value }) => {
-//       return data.name
-//         .toLocaleLowerCase()
-//         .startsWith(userData.toLocaleLowerCase());
-//     });
-//     emptyArray = emptyArray.map((data, { name, value }) => {
-//       return (data = `<li>${data.name}: ${data.value}</li>`);
-//     });
-//     searchWrapper.classList.add("active");
-//     showSuggestions(emptyArray);
-//   } else {
-//     searchWrapper.classList.remove("active");
-//   }
-// };
+inputBox.onkeyup = (event) => {
+  let userData = event.target.value;
+  let emptyArray = [];
+  if (userData) {
+    emptyArray = characterList.filter((data, { name, value }) => {
+      return data.name
+        .toLocaleLowerCase()
+        .startsWith(userData.toLocaleLowerCase());
+    });
+    emptyArray = emptyArray.map((data, { name, value }) => {
+      return (data = `<li>${data.value}</li>`);
+    });
+    searchWrapper.classList.add("active");
+    showSuggestions(emptyArray);
+  } else {
+    searchWrapper.classList.remove("active");
+  }
+};
 
-// function showSuggestions(list) {
-//   let listData;
-//   if (list.length) {
-//     listData = list.join("");
-//   } else {
-//     listData = `<li>Not Found</li>`;
-//   }
-//   suggBox.innerHTML = listData;
-// }
+function showSuggestions(list) {
+  let listData;
+  if (list.length) {
+    listData = list.join("");
+  } else {
+    listData = `<li>Not Found</li>`;
+  }
+  suggBox.innerHTML = listData;
+}
 
 //parallax

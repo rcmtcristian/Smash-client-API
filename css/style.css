@@ -13,6 +13,9 @@
   height: 0;
 }
 
+li {
+  z-index: 10;
+}
 .clear {
   clear: both;
 }
@@ -22,7 +25,7 @@ body {
   font-size: clamp(1.5rem, 2.5vw, 4rem);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin: 0;
-  /* text-transform: capitalize; */
+  overflow-x: hidden;
 }
 
 #pageTitle {
@@ -32,9 +35,6 @@ body {
   margin: 0.31em;
   padding: 0.1em;
   text-align: end;
-}
-
-#input {
 }
 
 .pageOne {
@@ -193,7 +193,8 @@ body {
 .pageTwo {
   display: flex;
   justify-content: space-around;
-  background-color: whitesmoke;
+  background-color: #202020;
+  color: white;
   padding-right: 1em;
   padding-top: 0.9em;
 }
@@ -203,7 +204,25 @@ body {
   flex-direction: column;
   width: 50%;
 }
-
+#voices {
+  display: flex;
+  flex-direction: column;
+}
 #characterVoiceImage {
-  max-width: 25vh;
+  max-width: 20vh;
+}
+
+.secondImage {
+  max-width: 100%;
+  width: fit-content;
+  height: 5em;
+  /* overflow: hidden;
+  object-fit: contain;
+  color: red;
+  position: relative;
+  font-size: 10rem;
+  opacity: 1;
+  right: -0.8em;
+  /* margin-top: 1em; */
+  transform: translate3d(30.8px, 0px, 0px);
 }

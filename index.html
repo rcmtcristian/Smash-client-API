@@ -30,11 +30,11 @@
         </section>
 
         <div class="topWrapper">
-          <div class="search">
+          <div class="search" style="z-index: 10;">
             <input
               id="input"
               type="text"
-              placeholder="Enter character name here"
+              placeholder="Enter character "
             />
             <div class="autocomp-box"></div>
             <div class="icon">
@@ -60,15 +60,26 @@
     </section>
 
     <section class="pageTwo">
-      <section id="story">
-        <p id="characterDescription">characterDescription</p>
+      <section id="story" class="wrapper">
+        <section class="parallax" noscale >
+             <p id="characterDescription">characterDescription</p>
       <div id="characterOrigin">Origin is here</div>
+        </section>
+     
       </section>
       
       <section id="voices">
-        <img id="characterVoiceImage"></img>
+        <img  id="characterVoiceImage"></img>
+         
+        
         <div id="characterVoice">VA:</div>
+        <div class="wrapper">
+<img  class="secondImage parallax"  x
+      noscale
+      speed="-.2"></img>
       <div style="visibility: hidden;" id="moves">Moves is here</div>
+        </div>
+         
       </section>
       
     </section>
