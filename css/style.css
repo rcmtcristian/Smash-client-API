@@ -209,7 +209,8 @@ body {
   flex-direction: column;
 }
 #characterVoiceImage {
-  max-width: 20vh;
+  max-width: 15vh;
+  border-radius: 80px;
 }
 
 .secondImage {
