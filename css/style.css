@@ -1,0 +1,193 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+/* main */
+body {
+  background-color: whitesmoke;
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 0;
+  /* text-transform: capitalize; */
+}
+
+#pageTitle {
+  color: white;
+  background-color: #e60012;
+  font-size: clamp(2.5rem, 3.9vw, 5.5rem);
+  margin: 0.31em;
+  padding: 0.1em;
+  text-align: end;
+}
+
+#input {
+}
+
+.pageOne {
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+}
+
+.back {
+  z-index: -1;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 76% 0, 39% 100%, 0% 100%);
+
+  /* background-image: url(/images/CaptainFalcon-Right-Taunt-SSBM.gif); */
+  background-size: cover;
+  filter: brightness(1.3) invert(0.17) saturate(2.6) sepia(0.25) blur(4px);
+}
+.pageTwo {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* search bar */
+.topWrapper {
+  max-width: 90%;
+  display: flex;
+  margin-left: 3.8em;
+  /* justify-content: space-between; */
+}
+.topWrapper.search {
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.search input {
+  height: 65px;
+  width: 100%;
+  outline: none;
+  border: none;
+  clip-path: polygon(0 0, 76% 0, 39% 100%, 0% 100%);
+  text-transform: capitalize;
+  padding: 0 10em 0 20px;
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.search.active input {
+  border-radius: 5px 5px 0 0;
+}
+.search .autocomp-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search.active .autocomp-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocomp-box li {
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search.active .autocomp-box li {
+  display: block;
+}
+.autocomp-box li:hover {
+  background: #efefef;
+}
+.search .icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 20px;
+  color: #3a0ca3;
+  cursor: pointer;
+}
+
+/* button */
+
+#button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 10;
+}
+
+#button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  #button {
+    padding: 0.25em 0.75em;
+  }
+}
+
+/* main stuff */
+
+/* showcase */
+.showcase {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+#characterName {
+  width: 100%;
+  height: 100%;
+  padding-left: 0.1em;
+  color: whitesmoke;
+  text-shadow: 1px 1px 0px #000000;
+  font-size: clamp(3.3rem, 8.7vw, 10.2rem);
+}
+
+#image {
+  object-fit: contain;
+  max-width: 70vh;
+  margin-left: 10vw;
+  /* border: 0px; */
+  color: red;
+  font-size: 10rem;
+  opacity: 1;
+  left: 35vw;
+  margin-top: -1em;
+}
+
+.pageTwo {
+}

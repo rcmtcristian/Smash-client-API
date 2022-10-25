@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/js/parallax/parallax/parallax.css" />
+    <title>Client Side API Code</title>
+  </head>
+  <body>
+    <section class="pageOne">
+      <section class="wrapper">
+        <div>
+          <div class="parallax back" speed="0.5"></div>
+        </div>
+        <section
+          style="
+            display: flex;
+            justify-content: space-around;
+            background-color: #e60012;
+            padding-bottom: 0.17em;
+          "
+        >
+          <h2 id="pageTitle">SUPER SMASH BROS MELEE FIGHTERS</h2>
+          <button id="button">
+            Choose your
+            <hr />
+            Fighter
+          </button>
+        </section>
+
+        <div class="topWrapper">
+          <div class="search">
+            <input
+              id="input"
+              type="text"
+              placeholder="Enter character name here"
+            />
+            <div class="autocomp-box"></div>
+            <div class="icon">
+              <ion-icon size="large" name="search-sharp"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <section class="showcase">
+          <h1 id="characterName">Name:</h1>
+          <section class="">
+            <img
+              id="image"
+              x
+              noscale
+              speed="-.2"
+              class="parallax"
+              src="/images/hand.jpg"
+              alt=""
+            />
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <section class="pageTwo">
+      <p id="characterDescription">characterDescription</p>
+      <div id="characterVoice">Voice is here</div>
+      <img id="characterVoiceImage">Voice is here</img>
+      <div id="characterOrigin">Origin is here</div>
+      <div id="moves">Moves is here</div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="/js/parallax/parallax/parallax.js"></script>
+  </body>
+</html>
