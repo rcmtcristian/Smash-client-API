@@ -27,7 +27,7 @@ body {
 
 #pageTitle {
   color: white;
-  background-color: #e60012;
+  background-color: #202020;
   font-size: clamp(2.5rem, 3.9vw, 5.5rem);
   margin: 0.31em;
   padding: 0.1em;
@@ -50,7 +50,7 @@ body {
   width: 100vw;
   clip-path: polygon(0 0, 76% 0, 39% 100%, 0% 100%);
 
-  /* background-image: url(/images/CaptainFalcon-Right-Taunt-SSBM.gif); */
+  background-image: url(/images/26a.gif);
   background-size: cover;
   filter: brightness(1.3) invert(0.17) saturate(2.6) sepia(0.25) blur(4px);
 }
@@ -166,7 +166,8 @@ body {
 .showcase {
   margin-top: 1em;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  width: 50%;
 }
 #characterName {
   width: 100%;
@@ -179,7 +180,7 @@ body {
 
 #image {
   object-fit: contain;
-  max-width: 70vh;
+  max-width: 61vh;
   margin-left: 10vw;
   /* border: 0px; */
   color: red;
@@ -190,4 +191,19 @@ body {
 }
 
 .pageTwo {
+  display: flex;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  padding-right: 1em;
+  padding-top: 0.9em;
+}
+
+#story {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#characterVoiceImage {
+  max-width: 25vh;
 }
