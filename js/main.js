@@ -49,33 +49,31 @@ async function apiRequest() {
 // search bar
 
 let characterList = [
-  { name: "Ganondorf", value: "Ganondorf" },
-  { name: "mr game & watch", value: "mr game & watch" },
-  { name: "jigglypuff", value: "jigglypuff" },
-  { name: "bowser", value: "bowser" },
-  { name: "captain falcon", value: "captain falcon" },
-  { name: "donkey kong", value: "donkey kong" },
-  { name: "dr mario", value: "dr mario" },
-  { name: "falco", value: "falco" },
-  { name: "fox", value: "fox" },
-  { name: "ganondorf", value: "ganondorf" },
-  { name: "ice climbers", value: "ice climbers" },
-  { name: "jigglypuff", value: "jigglypuff" },
-  { name: "kirby", value: "kirby" },
-  { name: "link", value: "link" },
-  { name: "luigi", value: "luigi" },
-  { name: "mario", value: "mario" },
-  { name: "Discord", value: "faridvatani" },
-  { name: "marth", value: "marth" },
-  { name: "ness", value: "ness" },
-  { name: "peach", value: "peach" },
-  { name: "pichu", value: " pichu" },
-  { name: "pikachu", value: "pikachu" },
-  { name: "roy", value: "roy" },
-  { name: "samus", value: " samus" },
-  { name: "young link", value: "young link" },
-  { name: "yoshi", value: "yoshi" },
-  { name: "zelda", value: "zelda" },
+  { name: "Ganondorf" },
+  { name: "Mr game & watch" },
+  { name: "jigglypuff" },
+  { name: "bowser" },
+  { name: "captain falcon" },
+  { name: "donkey kong" },
+  { name: "dr mario" },
+  { name: "falco" },
+  { name: "fox" },
+  { name: "ice climbers" },
+  { name: "jigglypuff" },
+  { name: "kirby" },
+  { name: "link" },
+  { name: "luigi" },
+  { name: "mario" },
+  { name: "marth" },
+  { name: "ness" },
+  { name: "peach" },
+  { name: "pichu" },
+  { name: "pikachu" },
+  { name: "roy" },
+  { name: "samus" },
+  { name: "young link" },
+  { name: "yoshi" },
+  { name: "zelda" },
 ];
 
 const searchWrapper = document.querySelector(".search");
@@ -92,7 +90,7 @@ inputBox.onkeyup = (event) => {
         .startsWith(userData.toLocaleLowerCase());
     });
     emptyArray = emptyArray.map((data, { name, value }) => {
-      return (data = `<li>${data.value}</li>`);
+      return (data = `<li>${data.name}</li>`);
     });
     searchWrapper.classList.add("active");
     showSuggestions(emptyArray);
@@ -110,5 +108,3 @@ function showSuggestions(list) {
   }
   suggBox.innerHTML = listData;
 }
-
-//parallax

@@ -216,13 +216,5 @@ body {
   max-width: 100%;
   width: fit-content;
   height: 5em;
-  /* overflow: hidden;
-  object-fit: contain;
-  color: red;
-  position: relative;
-  font-size: 10rem;
-  opacity: 1;
-  right: -0.8em;
-  /* margin-top: 1em; */
   transform: translate3d(30.8px, 0px, 0px);
 }
