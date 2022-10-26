@@ -272,7 +272,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    padding-right: 9em;
     font-weight: 200;
   }
 
