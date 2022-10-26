@@ -216,7 +216,7 @@ body {
 @media only screen and (max-width: 600px) {
   /*Big smartphones [426px -> 600px]*/
 }
-@media only screen and (max-width: 825px) {
+@media screen and (max-width: 825px) {
   /*Small smartphones [325px -> 425px]*/
 
   .search input {
