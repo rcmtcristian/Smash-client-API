@@ -204,6 +204,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
+  padding-top: 3em;
+  font-size: clamp(1.2rem, 2.5vw, 4rem);
 }
 #voices {
   display: flex;
@@ -222,8 +224,6 @@ body {
 }
 
 @media screen and (max-width: 825px) {
-  /*Small smartphones [325px -> 425px]*/
-
   .search input {
     height: 2em;
     width: 140%;
@@ -285,7 +285,8 @@ body {
     width: 50%;
     font-size: 0.9rem;
     padding-right: 9em;
-    font-weight: 200;
+    padding-top: 10em;
+    font-weight: 100;
   }
 
   #characterName {
