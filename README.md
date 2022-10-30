@@ -9,8 +9,8 @@
 
 # Repo for the Server Side of the API
 
-[API Application](https://github.com/matiassingers/awesome-readme)  
-[API Repo](https://github.com/matiassingers/awesome-readme)
+[API Application](https://names-and-faces-q9icov5fi-rcmtcristian.vercel.app/)  
+[API Repo](https://github.com/rcmtcristian/names-and-faces/tree/main)
 
 
 ## Lessons learned
